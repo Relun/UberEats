@@ -22,7 +22,7 @@ export class EditProfilePage implements OnInit {
     },
     {
       title:'Sin Gluten',
-      icon:'leaf',
+      icon:'remove-circle-outline',
       selected: false,
       color:'medium'
     },

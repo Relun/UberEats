@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-edit-profile',
@@ -83,9 +84,19 @@ recycling = [
   }
 ]
 
-  constructor() { }
+  constructor(public alertCtrl: AlertController) { }
 
   ngOnInit() {
   }
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Perfil Elige Verde creado',
+      subHeader: 'Tu huella de CO2 se ha reducido en un:',
+      message: 'Muchas gracias por ayudar al planeta',
+      buttons: ['OK']
+      
+    });
 
+    await alert.present();
+  }
 }

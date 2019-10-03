@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { RestourantJsonService } from '../../services/restourant-json.service';
+import { RestaurantsItem } from '../../interfaces/interfaces';
+
+
 
 @Component({
   selector: 'app-ppal-pages',
@@ -6,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ppal-pages.page.scss'],
 })
 export class PpalPagesPage implements OnInit {
+  
   slides: { img: string, titulo: string, desc: string }[] = [
     {
       img: '../../../assets/img-purchase/carouselVerde.png',
@@ -22,9 +27,20 @@ export class PpalPagesPage implements OnInit {
 
   categorias = ['Sort', 'Price Range', 'Max Delivery Fee', 'Dietary' ];
   color= 'primary'
-  constructor() { }
+ 
+  restaurantCard : RestaurantsItem[]=[];
+
+  constructor(private restaurantService : RestourantJsonService) { }
 
   ngOnInit() {
+
+    this.restaurantService.getRestaurant().
+    subscribe((resp) => {
+      console.log(resp)
+      this.restaurantCard.push(...resp.restaurants_Item);
+      console.log(this.restaurantCard)
+    });
+
   }
 
 }

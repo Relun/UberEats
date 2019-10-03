@@ -11,10 +11,13 @@ const routes: Routes = [
   { path: 'menu-restaurant', loadChildren: './pages/menu-restaurant/menu-restaurant.module#MenuRestaurantPageModule' },
   { path: 'puchase-detail', loadChildren: './pages/puchase-detail/puchase-detail.module#PuchaseDetailPageModule' },
   { path: 'git-process', loadChildren: './pages/git-process/git-process.module#GitProcessPageModule' },
+
   { path: 'ppal-pages', loadChildren: './pages/ppal-pages/ppal-pages.module#PpalPagesPageModule' },
   { path: 'alert', loadChildren: './pages/alert/alert.module#AlertPageModule' },
   { path: 'green-account', loadChildren: './pages/green-account/green-account.module#GreenAccountPageModule' },
   { path: 'green-profile-summary', loadChildren: './pages/green-profile-summary/green-profile-summary.module#GreenProfileSummaryPageModule' },
+  { path: 'gift', loadChildren: './pages/gift/gift.module#GiftPageModule' },
+  { path: 'green-edit-profile', loadChildren: './pages/green-edit-profile/green-edit-profile.module#GreenEditProfilePageModule' },
 
 
 ];

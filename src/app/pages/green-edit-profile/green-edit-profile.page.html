@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">
+
+      </ion-back-button>
+
+    </ion-buttons>
+    <ion-avatar class="avatar" slot="start">
+      <img src="./assets/img/avatar-verde.png">
+    </ion-avatar>
+    <ion-title class="names">Cristian Hernandez</ion-title>
+    <ion-item routerLink="/edit-profile" detail>
+      <ion-label class="see" color="success">Editar Perfil</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p class="description-text">
+    Acá puedes configurar tu perfil según tus preferencias. Además con nuestras opciones 
+ <ion-text color="success">Elige Verde</ion-text> puedes configurar tu perfil para disminuir tu huella de CO2.
+  </p>
+
+  <p class="description-text"> <ion-text color="success"> ¡Come sano y ayuda al medio ambiente!</ion-text></p>
+
+<ion-list>
+  <ion-item>
+      <ion-icon></ion-icon>
+    <ion-label>TIPO DE ALIMENTACIÓN</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let check of food">
+    <ion-icon [icon]="check.icon"></ion-icon>
+  <ion-label>{{ check.title }}</ion-label>
+  <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+</ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+      <ion-icon></ion-icon>
+    <ion-label>USO DE PLÁSTICO</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let check of plastic">
+    <ion-icon [icon]="check.icon"></ion-icon>
+  <ion-label>{{ check.title }}</ion-label>
+  <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+</ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+      <ion-icon></ion-icon>
+    <ion-label>OPCIONES DE DESPACHO</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let check of delivery">
+    <ion-icon [icon]="check.icon"></ion-icon>
+  <ion-label>{{ check.title }}</ion-label>
+  <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+</ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+      <ion-icon></ion-icon>
+    <ion-label>RECICLAJE</ion-label>
+  </ion-item>
+  <ion-item *ngFor="let check of recycling">
+    <ion-icon [icon]="check.icon"></ion-icon>
+  <ion-label>{{ check.title }}</ion-label>
+  <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+</ion-item>
+</ion-list>
+
+<!-- <ion-button color="dark" (click)="presentAlert()">Guardar Preferencias</ion-button> -->
+<ion-button color="dark" routerLink="/alert" expand="block">Guardar Preferencias</ion-button>
+<!-- <ion-button color="light" routerLink="/ppal-pages" expand="block">Hacer Pedido</ion-button> -->
+
+</ion-content>
+

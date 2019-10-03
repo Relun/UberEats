@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { GreenProfileSummaryPage } from './green-profile-summary.page';
+import { MenuThreeComponent } from 'src/app/components/menu-three/menu-three.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [GreenProfileSummaryPage]
+  declarations: [GreenProfileSummaryPage,MenuThreeComponent]
 })
 export class GreenProfileSummaryPageModule {}

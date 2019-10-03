@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'green-account', loadChildren: './pages/green-account/green-account.module#GreenAccountPageModule' },
   { path: 'green-profile-summary', loadChildren: './pages/green-profile-summary/green-profile-summary.module#GreenProfileSummaryPageModule' },
   { path: 'gift', loadChildren: './pages/gift/gift.module#GiftPageModule' },
+  { path: 'green-edit-profile', loadChildren: './pages/green-edit-profile/green-edit-profile.module#GreenEditProfilePageModule' },
 
 
 ];

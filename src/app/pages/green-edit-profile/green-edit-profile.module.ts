@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GreenProfileSummaryPage } from './green-profile-summary.page';
-import { MenuThreeComponent } from 'src/app/components/menu-three/menu-three.component';
+import { GreenEditProfilePage } from './green-edit-profile.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: GreenProfileSummaryPage
+    component: GreenEditProfilePage
   }
 ];
 
@@ -22,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [GreenProfileSummaryPage,MenuThreeComponent]
+  declarations: [GreenEditProfilePage]
 })
-export class GreenProfileSummaryPageModule {}
+export class GreenEditProfilePageModule {}

@@ -12,4 +12,6 @@ export class MenuRestaurantPage implements OnInit {
   ngOnInit() {
   }
 
+ 
+
 }

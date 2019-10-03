@@ -29,17 +29,17 @@ export class PpalPagesPage implements OnInit {
   color= 'primary'
  
   restaurantCard : RestaurantsItem[]=[];
+  rests:any;
 
   constructor(private restaurantService : RestourantJsonService) { }
 
   ngOnInit() {
 
-    this.restaurantService.getRestaurant().
-    subscribe((resp) => {
-      console.log(resp)
-      this.restaurantCard.push(...resp.restaurants_Item);
-      console.log(this.restaurantCard)
-    });
+    let a = this.restaurantService.getRestaurant();
+     let b = a.restaurants_Item;
+     console.log(b)
+     this.rests = b;
+     console.log(this.rests)
 
   }
 

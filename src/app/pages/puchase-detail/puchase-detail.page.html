@@ -1,9 +1,113 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>puchase-detail</ion-title>
-  </ion-toolbar>
+  <ion-img src="../../../assets/img-purchase/header-menu.png"></ion-img>
 </ion-header>
 
-<ion-content>
+
+<ion-content class="left">
+
+  <h3>Bowl Simple</h3>
+  <p>
+
+  </p>
+
+
+  <!--agregados-->
+  <ion-list>
+    <ion-item>
+      <ion-col size="12">
+        <ion-label>Elige ACOMPAÑAMIENTOS</ion-label>
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text color="medium">Obligatorio · Selecciona 2</ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-item *ngFor="let check of aggregates">
+      <ion-label>{{ check.option }}</ion-label>
+      <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+
+    <ion-item>
+
+      <ion-col size="12">
+        <ion-label>Elige tu aderezo favorito</ion-label>
+      </ion-col>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-text color="medium">Obligatorio </ion-text>
+      </ion-label>
+    </ion-item>
+
+    <ion-item *ngFor="let check of dressing ">
+      <ion-label>{{ check.options }}</ion-label>
+      <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+    </ion-item>
+
+
+  </ion-list>
+
+  <ion-list>
+
+      <ion-item>
+  
+        <ion-col size="12">
+          <ion-label>Solo fatal el TOPPING  =)</ion-label>
+        </ion-col>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          <ion-text color="medium">Obligatorio </ion-text>
+        </ion-label>
+      </ion-item>
+  
+      <ion-item *ngFor="let check of topping ">
+        <ion-label>{{ check.option }}</ion-label>
+        <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+      </ion-item>
+  
+  
+    </ion-list>
+
+
+
+  <ion-list>
+
+      <ion-item>
+  
+        <ion-col size="12">
+          <ion-label>¿Necesitas elementos desechables con tu pedido (servilletas o cubiertos de plástico)</ion-label>
+        </ion-col>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>
+          <ion-text color="medium">Obligatorio </ion-text>
+        </ion-label>
+      </ion-item>
+  
+      <ion-item *ngFor="let check of disposable">
+        <ion-label>{{ check.option }}</ion-label>
+        <ion-checkbox [(ngModel)]="check.selected" [color]="check.color" slot="start"></ion-checkbox>
+      </ion-item>
+  
+      <ion-item >
+          <ion-label>Instrucciones especiales</ion-label>
+         
+        </ion-item>
+        <ion-item >
+            <ion-label>Deja un comentario para la cocina</ion-label>
+           
+          </ion-item>
+    </ion-list>
+  <!-- <ion-button color="dark" (click)="presentAlert()">Guardar Preferencias</ion-button> -->
+  <ion-button color="success"  expand="full" >Agregar 1 al carrito   CLP4,1600.00</ion-button>
+ 
 
 </ion-content>

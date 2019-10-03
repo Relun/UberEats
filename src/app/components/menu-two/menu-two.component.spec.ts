@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeliveryMoreMapComponent } from './delivery-more-map.component';
+import { MenuTwoComponent } from './menu-two.component';
 
-describe('DeliveryMoreMapComponent', () => {
-  let component: DeliveryMoreMapComponent;
-  let fixture: ComponentFixture<DeliveryMoreMapComponent>;
+describe('MenuTwoComponent', () => {
+  let component: MenuTwoComponent;
+  let fixture: ComponentFixture<MenuTwoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeliveryMoreMapComponent ],
+      declarations: [ MenuTwoComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeliveryMoreMapComponent);
+    fixture = TestBed.createComponent(MenuTwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

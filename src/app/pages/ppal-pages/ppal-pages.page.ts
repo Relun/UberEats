@@ -49,6 +49,9 @@ export class PpalPagesPage implements OnInit {
 
   }
 
+  onTicketGreen(){
+    this.navCtr.navigateRoot('/edit-profile');
+  }
 
   changeRoute(){
     this.navCtr.navigateRoot('/menu-restaurant');

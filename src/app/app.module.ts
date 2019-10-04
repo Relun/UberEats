@@ -11,10 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { PopoverComponent } from './components/popover/popover.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,PopoverComponent],
   entryComponents: [],
   imports: [BrowserModule,
      IonicModule.forRoot(), 

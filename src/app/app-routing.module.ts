@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PopoverComponent } from './components/popover/popover.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'ppal-pages', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'green-profile-summary', loadChildren: './pages/green-profile-summary/green-profile-summary.module#GreenProfileSummaryPageModule' },
   { path: 'gift', loadChildren: './pages/gift/gift.module#GiftPageModule' },
   { path: 'green-edit-profile', loadChildren: './pages/green-edit-profile/green-edit-profile.module#GreenEditProfilePageModule' },
-
+{path:"invitate",component:PopoverComponent},
+  { path: 'detail', loadChildren: './pages/detail/detail.module#DetailPageModule' }
 
 ];
 

@@ -49,13 +49,28 @@
       <ion-col size="12">
 
         <ion-slides pager="true" class="slide-full" expand="full">
-          <ion-slide *ngFor="let slide of slides">
 
+            <ion-slide >
+                <ion-card>
+                  <img src='../../../assets/img-purchase/carouselVerde.png'  (click)="onTicketGreen()">
+                </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                  <ion-card>
+                    <img src='../../../assets/img-purchase/carouselCOmida.png' >
+                  </ion-card>
+                </ion-slide>
+
+          </ion-slides>
+        <!--
+          <ion-slide *ngFor="let slide of slides">
             <ion-card>
-              <img [src]="slide.img">
+              <img [src]="slide.img"  (click)="onClick(event.target.src)">
             </ion-card>
-          </ion-slide>
-        </ion-slides>
+          </ion-slide>-->
+
+     
       </ion-col>
     </ion-row>
 
@@ -82,14 +97,15 @@
         <ion-card class="ion-padding a">
 
           <ion-card-header>
-            <ion-img  [src]="restaurant.img"></ion-img>
+            <ion-img  [src]="restaurant.img" (click)="changeRoute()"></ion-img>
           </ion-card-header>
 
           <ion-card-content>
             <ion-item>
 
               <ion-label>
-                <h2>{{ restaurant.name }}</h2>
+                 <span> <img src="../../../assets/img-purchase/etiqueta-verde.png" class="ticket"></span>
+                <h2>{{ restaurant.name }}</h2> 
                 <h3> {{ restaurant.type_food }}<span>precio: {{ restaurant.price }}</span></h3>
               </ion-label>
 
@@ -114,6 +130,6 @@
 
 <ion-footer>
   <ion-toolbar>
-    <app-menu-two></app-menu-two>
+    <app-menu></app-menu>
   </ion-toolbar>
 </ion-footer>

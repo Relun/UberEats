@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RestourantJsonService } from '../../services/restourant-json.service';
 import { RestaurantsItem } from '../../interfaces/interfaces';
+import { NavController, PopoverController } from '@ionic/angular';
+import { PopoverComponent } from '../../components/popover/popover.component';
 
 
 
@@ -10,7 +12,7 @@ import { RestaurantsItem } from '../../interfaces/interfaces';
   styleUrls: ['./ppal-pages.page.scss'],
 })
 export class PpalPagesPage implements OnInit {
-  
+
   slides: { img: string, titulo: string, desc: string }[] = [
     {
       img: '../../../assets/img-purchase/carouselVerde.png',
@@ -21,26 +23,35 @@ export class PpalPagesPage implements OnInit {
       titulo: 'imagen 1',
       desc: 'algo por aqui'
     }
-  
+
   ];
 
 
-  categorias = ['Sort', 'Price Range', 'Max Delivery Fee', 'Dietary' ];
-  color= 'primary'
- 
-  restaurantCard : RestaurantsItem[]=[];
-  rests:any;
+  src: any;
 
-  constructor(private restaurantService : RestourantJsonService) { }
+  categorias = ['Sort', 'Price Range', 'Max Delivery Fee', 'Dietary'];
+  color = 'primary'
+
+  restaurantCard: RestaurantsItem[] = [];
+  rests: any;
+
+  constructor(private restaurantService: RestourantJsonService,
+    private navCtr: NavController,
+  ) { }
 
   ngOnInit() {
 
     let a = this.restaurantService.getRestaurant();
-     let b = a.restaurants_Item;
-     console.log(b)
-     this.rests = b;
-     console.log(this.rests)
+    let b = a.restaurants_Item;
+    console.log(b)
+    this.rests = b;
+    console.log(this.rests)
 
+  }
+
+
+  changeRoute(){
+    this.navCtr.navigateRoot('/menu-restaurant');
   }
 
 }
